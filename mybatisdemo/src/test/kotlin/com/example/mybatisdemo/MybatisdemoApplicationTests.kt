@@ -26,8 +26,9 @@ class MybatisdemoApplicationTests {
 	@Throws(Exception::class)
 	fun findByName() {
 		userMapper!!.insert("AAA", 20)
-		val u = userMapper!!.findByName("AAA")
+		val u = userMapper!!.findByName2("AAA")
 
-		Assert.assertEquals(10, u[0].age)
+		System.out.println("OK OK")
+		Assert.assertEquals(20, u[0].age)
 	}
 }
